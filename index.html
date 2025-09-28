@@ -287,6 +287,9 @@
     <option value="Set Colour Turtle">Set Colour Turtle - £3</option>
     <option value="Random Turtle">Random Turtle - £2</option>
     <option value="10 Turtle Lucky Bag">10 Turtle Lucky Bag - £18</option>
+    <option value="Set Colour Bee">Set Colour Turtle - £3</option>
+    <option value="Random Bee">Random Turtle - £2</option>
+    <option value="10 Turtle Lucky Bag">10 Bee Lucky Bag - £18</option>
   </select>
 
   <input type="text" name="name" id="name" placeholder="Your Name" required />
@@ -315,7 +318,9 @@
       baseColor = document.getElementById("base-color-select").value;
       secondaryColor = document.getElementById("secondary-color-select").value;
     }
-
+if (product === "Set Colour Turtle") {
+      baseColor = document.getElementById("base-color-select").value;
+      secondaryColor = document.getElementById("secondary-color-select").value;}
     // Create summary text
     let summaryHTML = `
       <h3>Thank you for your order, ${name}!</h3>
