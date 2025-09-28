@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Treebarn Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #1e90ff;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .product {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      transition: 0.3s ease;
+    }
+
+    .product select {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #28a745;
+      margin: 0.5rem 0;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    form input, form textarea, form button, form select {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #order-summary {
+      background: white;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #f1f1f1;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Store</h1>
+    <p>High quality items at great prices. Shop now!</p>
+    <a href="Treebarn.html"; style="font-size:300%;">Home!</a>
+  </header>
+
+  <div class="container">
+    <section class="products">
+      <!-- Product 1 with color selection -->
+      <div class="product">
+        <h3>Set Colour Turtle</h3>
+        <p>Base Colour</p>
+
+        <label for="base-color-select">Color:</label>
+        <select id="base-color-select">
+          <option value="red">Red</option>
+          <option value="brown-orange">Brown-Orange</option>
+          <option value="orange">Orange</option>
+          <option value="peach-yellow">Peach</option>
+          <option value="golden-yellow">Golden Yellow</option>
+          <option value="yellow">Yellow</option>
+          <option value="mint">Mint</option>
+          <option value="light green">Light Green</option>
+          <option value="green">Green</option>
+          <option value="dark green">Dark Green</option>
+          <option value="turquoise">Turquoise</option>
+          <option value="light blue">Light Blue</option>
+          <option value="blue">Blue</option>
+          <option value="baby blue">Baby Blue</option>
+          <option value="dusky blue">Dusky Blue</option>
+          <option value="dark blue">Dark Blue</option>
+          <option value="pink">Pink</option>
+          <option value="dark pink">Dark Pink</option>
+          <option value="peach-pink">Peach Pink</option>
+          <option value="light pink">Light Pink</option>
+          <option value="magenta">Magenta</option>
+          <option value="dark purple">Dark Purple</option>
+          <option value="white">White</option>
+          <option value="cream">Cream</option>
+          <option value="grey">Grey</option>
+          <option value="black">Black</option>
+          <option value="glow in the dark(+£2)">Glow in the Dark (+£2)</option>
+        </select>
+
+        <p>Secondary Colour</p>
+        <label for="secondary-color-select">Color:</label>
+        <select id="secondary-color-select">
+          <!-- Same options -->
+          <option value="red">Red</option>
+          <option value="brown-orange">Brown-Orange</option>
+          <option value="orange">Orange</option>
+          <option value="peach-yellow">Peach</option>
+          <option value="golden-yellow">Golden Yellow</option>
+          <option value="yellow">Yellow</option>
+          <option value="mint">Mint</option>
+          <option value="light green">Light Green</option>
+          <option value="green">Green</option>
+          <option value="dark green">Dark Green</option>
+          <option value="turquoise">Turquoise</option>
+          <option value="light blue">Light Blue</option>
+          <option value="blue">Blue</option>
+          <option value="baby blue">Baby Blue</option>
+          <option value="dusky blue">Dusky Blue</option>
+          <option value="dark blue">Dark Blue</option>
+          <option value="pink">Pink</option>
+          <option value="dark pink">Dark Pink</option>
+          <option value="peach-pink">Peach Pink</option>
+          <option value="light pink">Light Pink</option>
+          <option value="magenta">Magenta</option>
+          <option value="dark purple">Dark Purple</option>
+          <option value="white">White</option>
+          <option value="cream">Cream</option>
+          <option value="grey">Grey</option>
+          <option value="black">Black</option>
+          <option value="glow in the dark(+£2)">Glow in the Dark (+£2)</option>
+        </select>
+
+        <p class="price">£3</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <h3>Random Turtle</h3>
+        <p>A turtle of 2 random colours.</p>
+        <p class="price">£2</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <h3>10 Turtle Lucky Bag</h3>
+        <p>10 random turtles, good for resale. may take longer</p>
+        <p class="price">£18</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Order Now</h2>
+      <p>Once the form is submitted, please copy and paste the resulting information into the contact section on my homepage!</p>
+<form id="order-form">
+  <label for="product">Select Product:</label>
+  <select name="product" id="product" required>
+    <option value="">Choose a product</option>
+    <option value="Set Colour Turtle">Set Colour Turtle - £3</option>
+    <option value="Random Turtle">Random Turtle - £2</option>
+    <option value="10 Turtle Lucky Bag">10 Turtle Lucky Bag - £18</option>
+  </select>
+
+  <input type="text" name="name" id="name" placeholder="Your Name" required />
+  <input type="email" name="email" id="email" placeholder="Your Email" required />
+  <textarea name="address" id="address" rows="4" placeholder="Shipping Address" required></textarea>
+  <button type="submit">Place Order</button>
+</form>
+
+<!-- Order Summary Section (hidden by default) -->
+<div id="order-summary" style="display: none;"></div>
+
+<script>
+  document.getElementById("order-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const product = document.getElementById("product").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const address = document.getElementById("address").value;
+
+    let baseColor = "";
+    let secondaryColor = "";
+
+    // Only read colours if product is "Set Colour Turtle"
+    if (product === "Set Colour Turtle") {
+      baseColor = document.getElementById("base-color-select").value;
+      secondaryColor = document.getElementById("secondary-color-select").value;
+    }
+
+    // Create summary text
+    let summaryHTML = `
+      <h3>Thank you for your order, ${name}!</h3>
+      <p><strong>Product:</strong> ${product}</p>
+    `;
+
+    if (product === "Set Colour Turtle") {
+      summaryHTML += `
+        <p><strong>Base Colour:</strong> ${baseColor}</p>
+        <p><strong>Secondary Colour:</strong> ${secondaryColor}</p>
+      `;
+    }
+
+    summaryHTML += `
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Shipping Address:</strong><br>${address.replace(/\n/g, "<br>")}</p>
+    `;
+
+    // Replace the form with the summary
+    const form = document.getElementById("order-form");
+    const summary = document.getElementById("order-summary");
+    form.style.display = "none";
+    summary.innerHTML = summaryHTML;
+    summary.style.display = "block";
+  });
+</script>
+
+      <!-- Order Summary Section -->
+      <div id="order-summary" style="display: none;"></div>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("order-form").addEventListener("submit", function(e
